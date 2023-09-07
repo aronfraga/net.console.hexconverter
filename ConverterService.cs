@@ -38,7 +38,6 @@ namespace HexConverter
                     throw new MissingArgumentsException();
                 }
 
-
                 string inContext = await File.ReadAllTextAsync(_inPath);
                 byte[] bytes = Encoding.UTF8.GetBytes(inContext);
                 string outContent = BitConverter.ToString(bytes).Replace("-", "");
